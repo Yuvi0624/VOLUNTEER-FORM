@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर | MBDPSS Portal</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Devanagari Calligraphy & Regal Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Gotu&family=Rozha+One&family=Yatra+One&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons & html2canvas -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: {
+              980: '#140103',
+              950: '#210205',
+              900: '#2B0307',
+              850: '#38050B',
+              800: '#4B060F',
+              750: '#5C0813',
+              surface: '#290307',
+              card: '#1F0205'
+            },
+            regalGold: {
+              100: '#FFF9E5',
+              200: '#FDECB0',
+              300: '#F6DB85',
+              400: '#F3C649',
+              500: '#D4AF37',
+              600: '#B8860B',
+              700: '#946B08',
+              800: '#694B05',
+              accent: '#FFD700'
+            }
+          },
+          fontFamily: {
+            hindiCalligraphy: ['"Rozha One"', '"Yatra One"', 'serif'],
+            hindiTitle: ['"Yatra One"', 'cursive'],
+            devanagariTiro: ['"Tiro Devanagari Hindi"', 'serif'],
+            devanagariGotu: ['"Gotu"', 'serif'],
+            devanagari: ['"Noto Sans Devanagari"', 'sans-serif'],
+            cinzel: ['"Cinzel"', 'serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #140103; }
+    ::-webkit-scrollbar-thumb { background: #B8860B; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #FFD700; }
+
+    body {
+      background-color: #210205;
+      color: #FFF9E5;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Pulsing Glow for Goddess Maa Durga */
+    @keyframes divineAuraGlow {
+      0%, 100% {
+        filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.45)) drop-shadow(0 0 50px rgba(212, 175, 55, 0.3));
+        transform: scale(1);
+      }
+      50% {
+        filter: drop-shadow(0 0 45px rgba(255, 215, 0, 0.75)) drop-shadow(0 0 80px rgba(255, 140, 0, 0.5));
+        transform: scale(1.015);
+      }
+    }
+    .durga-aura-anim {
+      animation: divineAuraGlow 6s ease-in-out infinite;
+    }
+
+    /* Rotating Divine Chakra */
+    @keyframes spinChakra {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .chakra-rotate {
+      animation: spinChakra 35s linear infinite;
+    }
+
+    /* Shimmer Gold Sheen for CTA buttons */
+    @keyframes goldSheen {
+      0% { transform: translateX(-150%) rotate(25deg); }
+      100% { transform: translateX(250%) rotate(25deg); }
+    }
+    .btn-luxury-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-luxury-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 245, 200, 0.5) 50%,
+        rgba(255, 255, 255, 0) 75%
+      );
+      transform: translateX(-150%) rotate(25deg);
+      transition: all 0.75s ease;
+    }
+    .btn-luxury-shimmer:hover::after {
+      animation: goldSheen 1.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Embossed Hindi Calligraphy */
+    .calligraphy-gold {
+      color: #FFD700;
+      text-shadow: 
+        0 1px 0 #946B08,
+        0 2px 0 #694B05,
+        0 4px 10px rgba(0, 0, 0, 0.95),
+        0 0 25px rgba(255, 215, 0, 0.45);
+    }
+    .calligraphy-gold-sub {
+      color: #FDECB0;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.8), 0 0 10px rgba(212, 175, 55, 0.3);
+    }
+
+    /* Animated Tab transitions */
+    .view-enter {
+      animation: viewSlideFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes viewSlideFade {
+      0% { opacity: 0; transform: translateY(12px) scale(0.99); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Holographic Foil on Virtual ID */
+    .hologram-strip {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 215, 0, 0.7) 0%,
+        rgba(255, 255, 255, 0.9) 25%,
+        rgba(218, 165, 32, 0.7) 50%,
+        rgba(255, 255, 255, 0.95) 75%,
+        rgba(255, 215, 0, 0.7) 100%
+      );
+      background-size: 200% 200%;
+      animation: hologramShift 4.5s ease infinite;
+    }
+    @keyframes hologramShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Official Blue Ink Rubber Stamp Texture & Overlay */
+    .stamp-blue-texture {
+      color: #0d3b82;
+      filter: drop-shadow(0 1px 1px rgba(13, 59, 130, 0.35));
+      mix-blend-mode: multiply;
+      opacity: 0.88;
+    }
+
+    /* Print settings for badge print */
+    @media print {
+      body * { visibility: hidden !important; }
+      #printableIdArea, #printableIdArea * { visibility: visible !important; }
+      #printableIdArea {
+        position: fixed !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+
+
+<body class="min-h-screen flex flex-col selection:bg-regalGold-500 selection:text-maroon-980 relative">
+
+  <!-- Interactive Golden Ambient Particle Canvas -->
+  <canvas id="ambientCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
+
+  <!-- Atmospheric Background Watermark -->
+  <div id="ambientBackgroundWrapper" class="fixed inset-0 pointer-events-none z-0 opacity-10 flex items-center justify-center overflow-hidden">
+    <img 
+      id="bgWatermarkImg"
+      src="https://images.unsplash.com/photo-1601659244093-9c84e1b8c06d?auto=format&fit=crop&w=1600&q=80" 
+      alt="Atmospheric Background" 
+      class="w-full h-full object-cover object-center filter blur-sm scale-110"
+      onerror="handleBgWatermarkFallback(this)"
+    />
+  </div>
+
+  <!-- STICKY SOLID ROYAL MAROON & GOLD HEADER -->
+  <header class="sticky top-0 z-40 bg-[#210205] border-b-2 border-regalGold-500 shadow-2xl backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Brand & Calligraphy Heading -->
+      <div class="flex items-center space-x-3 cursor-pointer group" onclick="switchTab('home')">
+        <div class="w-12 h-12 rounded-2xl border-2 border-regalGold-400 bg-maroon-950 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 relative overflow-hidden shrink-0">
+          <span class="text-regalGold-400 text-2xl font-bold font-devanagariGotu">ॐ</span>
+        </div>
+        <div>
+          <h1 class="font-hindiCalligraphy text-lg sm:text-2xl font-black calligraphy-gold tracking-wide leading-tight">
+            माँ भवानी दुर्गा पूजा सुरक्षा समिति
+          </h1>
+          <p class="text-xs sm:text-sm font-semibold calligraphy-gold-sub flex items-center gap-1.5 font-hindiTitle">
+            <span class="text-regalGold-400">🚩</span> राँची महानगर, झारखंड
+            <span class="text-[10px] text-regalGold-300/70 font-sans hidden sm:inline">| MBDPSS Volunteer Portal</span>
+          </p>
+        </div>
+      </div>
+
+      <nav class="flex items-center flex-wrap gap-1.5 sm:gap-2">
+        <button id="nav-btn-home" onclick="switchTab('home')" class="nav-tab px-3.5 py-1.5 text-xs sm:text-sm font-bold rounded-xl transition-all duration-300 bg-regalGold-500 text-maroon-980 shadow-md flex items-center gap-1.5 btn-luxury-shimmer">
+          <i data-lucide="home" class="w-4 h-4"></i>
+          <span>मुख्य पृष्ठ</span>
+        </button>
+        <button id="nav-btn-form" onclick="switchTab('form')" class="nav-tab px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-xl transition-all duration-300 bg-maroon-950 hover:bg-maroon-900 text-regalGold-200 border border-regalGold-600 flex items-center gap-1.5">
+          <i data-lucide="user-plus" class="w-4 h-4 text-regalGold-400"></i>
+          <span>पंजीकरण फॉर्म</span>
+        </button>
+        <button id="nav-btn-card" onclick="switchTab('card')" class="nav-tab px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-xl transition-all duration-300 bg-maroon-950 hover:bg-maroon-900 text-regalGold-200 border border-regalGold-600 flex items-center gap-1.5">
+          <i data-lucide="id-card" class="w-4 h-4 text-regalGold-300"></i>
+          <span>वर्चुअल ID कार्ड</span>
+        </button>
+        <button id="nav-btn-guidelines" onclick="switchTab('guidelines')" class="nav-tab px-3 py-1.5 text-xs sm:text-sm font-medium rounded-xl transition-all duration-300 bg-maroon-950 hover:bg-maroon-900 text-regalGold-200 border border-regalGold-600 flex items-center gap-1.5">
+          <i data-lucide="shield-alert" class="w-4 h-4 text-regalGold-400"></i>
+          <span>सुरक्षा निर्देश</span>
+        </button>
+        <button id="nav-btn-admin" onclick="openAdminModal()" class="px-3 py-1.5 text-xs sm:text-sm font-bold rounded-xl transition-all duration-300 bg-maroon-850 hover:bg-regalGold-500 hover:text-maroon-980 text-regalGold-200 border border-regalGold-400 shadow-md flex items-center gap-1.5">
+          <i data-lucide="shield-check" class="w-4 h-4 text-regalGold-400"></i>
+          <span>प्रशासनिक लॉगिन</span>
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="flex-grow container mx-auto px-4 sm:px-6 py-6 max-w-6xl relative z-10">
+
+
+    <!-- TAB 1: HERO LANDING PAGE -->
+    <section id="tab-home" class="tab-content view-enter space-y-8">
+      
+      <div class="rounded-3xl border-2 border-regalGold-500 bg-[#290307] p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        
+        <!-- Background Radiant Rays & Subtle Mandala -->
+        <div class="absolute inset-0 pointer-events-none opacity-20 flex items-center justify-center">
+          <div class="w-[600px] h-[600px] rounded-full border-[10px] border-dashed border-regalGold-400 chakra-rotate"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          
+          <!-- Left Column: Sacred Title & CTAs -->
+          <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-regalGold-400/80 bg-[#140103] text-regalGold-200 text-xs sm:text-sm font-semibold shadow-inner">
+              <span class="text-regalGold-400 animate-pulse">🔱</span>
+              <span class="font-devanagariGotu">।। या देवी सर्वभूतेषु शक्ति-रूपेण संस्थिता ।।</span>
+              <span class="text-regalGold-400 animate-pulse">🔱</span>
+            </div>
+
+            <h2 class="font-hindiCalligraphy text-3xl sm:text-5xl md:text-6xl font-black calligraphy-gold leading-tight">
+              माँ भवानी दुर्गा पूजा सुरक्षा समिति
+            </h2>
+            <h3 class="font-hindiCalligraphy text-2xl sm:text-3xl md:text-4xl calligraphy-gold-sub font-bold tracking-wider">
+              राँची महानगर
+            </h3>
+            <p class="font-cinzel text-xs sm:text-sm text-regalGold-400 font-bold tracking-widest uppercase">
+              MAA BHAWANI DURGA PUJA SURAKSHA SAMITI • RANCHI MAHANAGAR
+            </p>
+
+            <p class="text-regalGold-100/95 text-sm sm:text-base leading-relaxed font-devanagari pt-2">
+              राँची महानगर के 200+ भव्य दुर्गा पूजा पंडालों, मुख्य विसर्जन मार्गों एवं संवेदनशील क्षेत्रों में सुगम कतार प्रबंधन, महिला व बाल सुरक्षा, प्राथमिक चिकित्सा तथा 24×7 अनुशासित पहरेदारी हेतु समर्पित सुरक्षा स्वयंसेवकों का आधिकारिक डिजिटल पंजीकरण एवं वर्चुअल पहचान पत्र मंच।
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
+              <button onclick="switchTab('form')" class="px-7 py-3.5 bg-regalGold-500 hover:bg-regalGold-400 text-maroon-980 font-black text-sm sm:text-base rounded-2xl shadow-2xl transform hover:-translate-y-0.5 active:scale-95 transition-all duration-300 flex items-center gap-2 btn-luxury-shimmer">
+                <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+                <span>स्वयंसेवक फॉर्म भरें (Register Now)</span>
+              </button>
+              
+              <button onclick="switchTab('card')" class="px-6 py-3.5 bg-[#140103] hover:bg-[#340409] border-2 border-regalGold-500 text-regalGold-200 font-bold text-sm sm:text-base rounded-2xl shadow-xl transition-all duration-300 flex items-center gap-2">
+                <i data-lucide="badge-check" class="w-5 h-5 text-regalGold-400"></i>
+                <span>वर्चुअल ID कार्ड डाउनलोड करें</span>
+              </button>
+            </div>
+
+            <!-- Mandatory Misuse & Disciplinary Warning -->
+            <div class="mt-4 p-3.5 rounded-xl bg-[#140103] border-l-4 border-l-regalGold-500 border border-maroon-800 text-left text-xs text-regalGold-200 leading-relaxed">
+              <strong class="text-regalGold-400">विशेष सुरक्षा एवं कानूनी चेतावनी (Note):</strong> If someone found doing misuse of ID card, management will take strict action against them, any kind of mismanagement, security breach around puja pandals, fights will not be entertained by MBDPSS Management.
+            </div>
+
+          </div>
+
+          <!-- Right Column: Maa Durga Artwork -->
+          <div class="lg:col-span-5 flex flex-col items-center justify-center">
+            <div class="relative group">
+              <!-- Golden halo aura -->
+              <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-regalGold-600 via-amber-400 to-yellow-200 opacity-60 blur-lg group-hover:opacity-100 transition duration-1000"></div>
+              
+              <div class="relative w-72 sm:w-80 md:w-96 rounded-3xl overflow-hidden border-4 border-regalGold-400 bg-maroon-950 shadow-2xl durga-aura-anim">
+                
+                <!-- Maa Durga Image with automatic fallback handlers -->
+                <img 
+                  id="heroMaaDurgaImg"
+                  src="https://images.unsplash.com/photo-1601659244093-9c84e1b8c06d?auto=format&fit=crop&w=800&q=80" 
+                  alt="Maa Bhawani Durga Puja Suraksha Samiti" 
+                  class="w-full h-[420px] object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                  onerror="handleHeroImageFallback(this)"
+                />
+                
+                <!-- Fallback SVG Canvas container -->
+                <div id="svgDurgaFallback" class="hidden w-full h-[420px] bg-gradient-to-b from-[#38050B] via-[#210205] to-[#140103] flex flex-col items-center justify-center p-6 text-center">
+                  <div class="w-32 h-32 rounded-full border-4 border-regalGold-400 bg-maroon-950 flex items-center justify-center shadow-2xl mb-4">
+                    <span class="text-6xl text-regalGold-400 font-bold font-devanagariGotu animate-pulse">🔱</span>
+                  </div>
+                  <h4 class="font-hindiCalligraphy text-2xl font-bold text-regalGold-300">माँ भवानी</h4>
+                  <p class="font-hindiTitle text-sm text-regalGold-100">दुर्गा पूजा सुरक्षा समिति, राँची</p>
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-[#210205] via-transparent to-transparent"></div>
+
+                <!-- Overlay Badge -->
+                <div class="absolute bottom-3 inset-x-3 text-center p-2.5 rounded-xl bg-[#140103]/90 border border-regalGold-500/80 backdrop-blur-sm">
+                  <div class="text-[11px] font-bold text-regalGold-400 font-devanagariGotu flex items-center justify-center gap-1.5">
+                    <span>🔱</span> माँ भवानी का आशीर्वाद • सर्वदा विजयी <span>🔱</span>
+                  </div>
+                  <div class="text-[9px] text-regalGold-200 tracking-wider uppercase font-cinzel">
+                    MBDPSS RANCHI MAHANAGAR 2026
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Optional Image Switcher -->
+            <div class="mt-3 flex items-center gap-2">
+              <label for="customDurgaUpload" class="text-[11px] text-regalGold-300/80 hover:text-regalGold-300 flex items-center gap-1.5 cursor-pointer bg-[#140103] px-3 py-1 rounded-lg border border-regalGold-600 transition">
+                <i data-lucide="image-plus" class="w-3.5 h-3.5 text-regalGold-400"></i>
+                <span>कस्टम माँ दुर्गा फोटो बदलें (Upload Custom Image)</span>
+              </label>
+              <input type="file" id="customDurgaUpload" accept="image/*" class="hidden" onchange="handleCustomDurgaUpload(event)" />
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Live Statistics Counter -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 pt-8 border-t border-regalGold-500/40 text-center">
+          <div class="p-3 bg-[#140103] rounded-2xl border border-regalGold-600 hover:border-regalGold-400 transition">
+            <div class="text-2xl sm:text-3xl font-black text-regalGold-300 font-mono">1,500+</div>
+            <div class="text-xs text-regalGold-100 font-medium font-devanagari">पंजीकृत स्वयंसेवक</div>
+          </div>
+          <div class="p-3 bg-[#140103] rounded-2xl border border-regalGold-600 hover:border-regalGold-400 transition">
+            <div class="text-2xl sm:text-3xl font-black text-regalGold-300 font-mono">35+</div>
+            <div class="text-xs text-regalGold-100 font-medium font-devanagari">राँची जिला थाना क्षेत्र</div>
+          </div>
+          <div class="p-3 bg-[#140103] rounded-2xl border border-regalGold-600 hover:border-regalGold-400 transition">
+            <div class="text-2xl sm:text-3xl font-black text-regalGold-300 font-mono">200+</div>
+            <div class="text-xs text-regalGold-100 font-medium font-devanagari">संरक्षित पूजा पंडाल</div>
+          </div>
+          <div class="p-3 bg-[#140103] rounded-2xl border border-regalGold-600 hover:border-regalGold-400 transition">
+            <div class="text-2xl sm:text-3xl font-black text-regalGold-300 font-mono">24×7</div>
+            <div class="text-xs text-regalGold-100 font-medium font-devanagari">केंद्रीय कंट्रोल रूम</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Committee Leadership Highlights -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="p-5 rounded-3xl border-2 border-regalGold-500/60 bg-[#290307] flex items-center gap-4 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl border-2 border-regalGold-400 bg-[#140103] flex items-center justify-center text-regalGold-300 text-lg font-black shrink-0 font-cinzel">
+            RR
+          </div>
+          <div>
+            <div class="text-[11px] text-regalGold-400 font-bold uppercase tracking-wider font-sans">समिति अध्यक्षीय नेतृत्व</div>
+            <div class="font-hindiCalligraphy text-xl font-bold text-regalGold-100">रौनक राजपूत</div>
+            <div class="text-xs text-regalGold-200/80 font-devanagari">अध्यक्ष, माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर</div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-3xl border-2 border-regalGold-500/60 bg-[#290307] flex items-center gap-4 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl border-2 border-regalGold-400 bg-[#140103] flex items-center justify-center text-regalGold-300 text-lg font-black shrink-0 font-cinzel">
+            YK
+          </div>
+          <div>
+            <div class="text-[11px] text-regalGold-400 font-bold uppercase tracking-wider font-sans">प्रबंधन एवं सिस्टम संचालन</div>
+            <div class="font-hindiCalligraphy text-xl font-bold text-regalGold-100">युवराज कनिष्क आर्य</div>
+            <div class="text-xs text-regalGold-200/80 font-devanagari">उपाध्यक्ष, MBDPSS, राँची महानगर</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- TAB 2: VOLUNTEER REGISTRATION FORM -->
+    <section id="tab-form" class="tab-content hidden space-y-6">
+      
+      <div class="text-center space-y-1.5">
+        <span class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#140103] text-regalGold-300 border border-regalGold-500">
+          दुर्गा पूजा सुरक्षा सत्र 2026 • MBDPSS Volunteer Enrollment
+        </span>
+        <h2 class="font-hindiCalligraphy text-2xl sm:text-4xl font-bold text-regalGold-200">
+          माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर
+        </h2>
+        <p class="text-xs sm:text-sm text-regalGold-200/80 font-devanagari">
+          कृपया सभी विवरण ध्यानपूर्वक भरें। सत्यापन के उपरांत तुरंत क्रमबद्ध यूनिक सीरियल नंबर आईडी कार्ड जारी होगा।
+        </p>
+      </div>
+
+      <!-- Age Limit & Statutory Disciplinary Notice -->
+      <div class="p-4 rounded-2xl border-2 border-red-500/80 bg-[#1F0205] text-regalGold-100 text-xs sm:text-sm space-y-1.5 shadow-md">
+        <div class="flex items-center gap-2 text-red-300 font-bold">
+          <i data-lucide="alert-octagon" class="w-5 h-5 text-red-400 shrink-0"></i>
+          <span>अनिवार्य आयु सीमा: 18 वर्ष से कम आयु वाले स्वयंसेवकों को फॉर्म भरने की अनुमति नहीं है!</span>
+        </div>
+        <p class="text-[11.5px] text-regalGold-200/90 leading-relaxed font-devanagari">
+          <strong>Note :</strong> If someone found doing misuse of ID card, management will take strict action against them, any kind of mismanagement, security breach around puja pandals, fights will not be entertained by MBDPSS Management.
+        </p>
+      </div>
+
+      <!-- Registration Form Container -->
+      <div class="rounded-3xl border-2 border-regalGold-500 bg-[#290307] p-6 sm:p-10 shadow-2xl relative">
+        <form id="volunteerForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+
+            <!-- 1. Full Name (Only letters allowed) -->
+            <div class="space-y-1.5">
+              <label class="block text-xs sm:text-sm font-bold text-regalGold-200 flex items-center justify-between">
+                <span>1. पूरा नाम (Full Name) <span class="text-red-400">*</span></span>
+                <span class="text-[11px] text-regalGold-300/70 font-normal">केवल अक्षर (Letters only)</span>
+              </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-regalGold-400">
+                  <i data-lucide="user" class="w-4 h-4"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName"
+                  required 
+                  placeholder="उदा. अमित कुमार / Amit Kumar" 
+                  oninput="validateNameInput(this)"
+                  class="w-full pl-10 pr-3 py-2.5 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-medium transition"
+                />
+              </div>
+              <p id="nameError" class="text-xs text-red-400 hidden font-medium">कृपया नाम में केवल अक्षर (अंग्रेजी या हिंदी) ही दर्ज करें।</p>
+            </div>
+
+            <!-- 2. Photo Upload with Live Preview -->
+            <div class="space-y-1.5">
+              <label class="block text-xs sm:text-sm font-bold text-regalGold-200 flex items-center justify-between">
+                <span>2. पासपोर्ट फोटो अपलोड (Photo Upload) <span class="text-red-400">*</span></span>
+                <span class="text-[11px] text-regalGold-300/70 font-normal">JPG/PNG (Max 3MB)</span>
+              </label>
+              <div class="flex items-center gap-3">
+                <div class="relative w-14 h-14 rounded-xl border-2 border-dashed border-regalGold-400 bg-[#140103] overflow-hidden flex items-center justify-center shrink-0 shadow-md">
+                  <img id="photoPreview" src="" alt="Preview" class="w-full h-full object-cover hidden" />
+                  <i id="photoPlaceholderIcon" data-lucide="camera" class="w-6 h-6 text-regalGold-400/70"></i>
+                </div>
+                <div class="flex-grow">
+                  <input 
+                    type="file" 
+                    id="photoUpload" 
+                    name="photoUpload"
+                    accept="image/*" 
+                    required 
+                    onchange="handlePhotoUpload(event)"
+                    class="block w-full text-xs text-regalGold-200 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-regalGold-500 file:text-maroon-980 hover:file:bg-regalGold-400 cursor-pointer"
+                  />
+                  <span id="photoFileName" class="text-[11px] text-regalGold-300/60 mt-1 block truncate">कोई फोटो नहीं चुनी गई</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. DOB (Strict 18+ enforcement) -->
+            <div class="space-y-1.5">
+              <label class="block text-xs sm:text-sm font-bold text-regalGold-200 flex items-center justify-between">
+                <span>3. जन्म तिथि (DOB) <span class="text-red-400">*</span></span>
+                <span class="text-[11px] text-red-300 font-bold">18 वर्ष या उससे अधिक आवश्यक</span>
+              </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-regalGold-400">
+                  <i data-lucide="calendar" class="w-4 h-4"></i>
+                </div>
+                <input 
+                  type="date" 
+                  id="dob" 
+                  name="dob"
+                  required 
+                  onchange="checkAgeEligibility(this.value)"
+                  class="w-full pl-10 pr-3 py-2.5 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-medium transition"
+                />
+              </div>
+              <p id="ageFeedback" class="text-xs font-semibold"></p>
+            </div>
+
+            <!-- 4. Mobile Number (Strict 10 digits) -->
+            <div class="space-y-1.5">
+              <label class="block text-xs sm:text-sm font-bold text-regalGold-200 flex items-center justify-between">
+                <span>4. मोबाइल नंबर (Mobile No) <span class="text-red-400">*</span></span>
+                <span class="text-[11px] text-regalGold-300/70 font-normal">केवल 10 अंक (10 Digits Only)</span>
+              </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-regalGold-300 font-bold text-xs">
+                  +91
+                </div>
+                <input 
+                  type="text" 
+                  id="mobile" 
+                  name="mobile"
+                  maxlength="10" 
+                  required 
+                  placeholder="9876543210" 
+                  oninput="validateDigitsOnly(this, 10)"
+                  class="w-full pl-12 pr-3 py-2.5 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-mono transition"
+                />
+              </div>
+              <p id="mobileError" class="text-xs text-red-400 hidden font-medium">कृपया सटीक 10 अंकों का मोबाइल नंबर दर्ज करें।</p>
+            </div>
+
+            <!-- 5. Aadhaar Number (Strict 12 digits) -->
+            <div class="space-y-1.5">
+              <label class="block text-xs sm:text-sm font-bold text-regalGold-200 flex items-center justify-between">
+                <span>5. आधार संख्या (Aadhar No) <span class="text-red-400">*</span></span>
+                <span class="text-[11px] text-regalGold-300/70 font-normal">केवल 12 अंक (12 Digits Only)</span>
+              </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-regalGold-400">
+                  <i data-lucide="fingerprint" class="w-4 h-4"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="aadhar" 
+                  name="aadhar"
+                  maxlength="14" 
+                  required 
+                  placeholder="xxxx xxxx xxxx" 
+                  oninput="formatAadharNumber(this)"
+                  class="w-full pl-10 pr-3 py-2.5 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-mono tracking-wider transition"
+                />
+              </div>
+              <p id="aadharError" class="text-xs text-red-400 hidden font-medium">आधार संख्या सटीक 12 अंकों की होनी चाहिए।</p>
+            </div>
+
+            <!-- 6. Local Police Station of Ranchi District (Single Select) -->
+            <div class="space-y-1.5">
+              <label class="block text-xs sm:text-sm font-bold text-regalGold-200 flex items-center justify-between">
+                <span>6. स्थानीय थाना (Local Police Station) <span class="text-red-400">*</span></span>
+                <span class="text-[11px] text-regalGold-300 font-semibold">राँची जिला (केवल एक चुनें)</span>
+              </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-regalGold-400">
+                  <i data-lucide="shield" class="w-4 h-4"></i>
+                </div>
+                <select 
+                  id="policeStation" 
+                  name="policeStation"
+                  required 
+                  class="w-full pl-10 pr-8 py-2.5 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-medium appearance-none transition"
+                >
+                  <option value="" disabled selected class="bg-[#290307]">राँची जिले का थाना चुनें (Select One Only)</option>
+                  <option value="Kotwali (कोतवाली)" class="bg-[#290307]">Kotwali (कोतवाली)</option>
+                  <option value="Lalpur (लालपुर)" class="bg-[#290307]">Lalpur (लालपुर)</option>
+                  <option value="Argora (अरगोड़ा)" class="bg-[#290307]">Argora (अरगोड़ा)</option>
+                  <option value="Doranda (डोरंडा)" class="bg-[#290307]">Doranda (डोरंडा)</option>
+                  <option value="Chutia (चुटीया)" class="bg-[#290307]">Chutia (चुटीया)</option>
+                  <option value="Jagannathpur (जगन्नाथपुर)" class="bg-[#290307]">Jagannathpur (जगन्नाथपुर)</option>
+                  <option value="Dhurwa (धुर्वा)" class="bg-[#290307]">Dhurwa (धुर्वा)</option>
+                  <option value="Bariatu (बरियातू)" class="bg-[#290307]">Bariatu (बरियातू)</option>
+                  <option value="Sadar (सदर थाना)" class="bg-[#290307]">Sadar (सदर थाना)</option>
+                  <option value="Sukhdeonagar (सुखदेवनगर)" class="bg-[#290307]">Sukhdeonagar (सुखदेवनगर)</option>
+                  <option value="Gonda (गोंदा)" class="bg-[#290307]">Gonda (गोंदा)</option>
+                  <option value="Kanke (कांके)" class="bg-[#290307]">Kanke (कांके)</option>
+                  <option value="Pithoria (पिठोरिया)" class="bg-[#290307]">Pithoria (पिठोरिया)</option>
+                  <option value="Ormanjhi (ओरमांझी)" class="bg-[#290307]">Ormanjhi (ओरमांझी)</option>
+                  <option value="Angara (अनगड़ा)" class="bg-[#290307]">Angara (अनगड़ा)</option>
+                  <option value="Namkum (नामकुम)" class="bg-[#290307]">Namkum (नामकुम)</option>
+                  <option value="Tatisilwai (तातीसिलवे)" class="bg-[#290307]">Tatisilwai (तातीसिलवे)</option>
+                  <option value="Tupudana (तुपुदाना ओ.पी.)" class="bg-[#290307]">Tupudana (तुपुदाना ओ.पी.)</option>
+                  <option value="Hatia (हटिया)" class="bg-[#290307]">Hatia (हटिया)</option>
+                  <option value="Bundu (बुंडू)" class="bg-[#290307]">Bundu (बुंडू)</option>
+                  <option value="Tamar (तमाड़)" class="bg-[#290307]">Tamar (तमाड़)</option>
+                  <option value="Sonahatu (सोनाहातू)" class="bg-[#290307]">Sonahatu (सोनाहातू)</option>
+                  <option value="Rahe (राहे)" class="bg-[#290307]">Rahe (राहे)</option>
+                  <option value="Silli (सिल्ली)" class="bg-[#290307]">Silli (सिल्ली)</option>
+                  <option value="Ratu (रातू)" class="bg-[#290307]">Ratu (रातू)</option>
+                  <option value="Nagri (नगड़ी)" class="bg-[#290307]">Nagri (नगड़ी)</option>
+                  <option value="Itki (इटकी)" class="bg-[#290307]">Itki (इटकी)</option>
+                  <option value="Bero (बेड़ो)" class="bg-[#290307]">Bero (बेड़ो)</option>
+                  <option value="Karra (कर्रा)" class="bg-[#290307]">Karra (कर्रा)</option>
+                  <option value="Lapung (लापुंग)" class="bg-[#290307]">Lapung (लापुंग)</option>
+                  <option value="Mandar (मांडर)" class="bg-[#290307]">Mandar (मांडर)</option>
+                  <option value="Chanho (चान्हो)" class="bg-[#290307]">Chanho (चान्हो)</option>
+                  <option value="Khelgaon (खेलगांव ओ.पी.)" class="bg-[#290307]">Khelgaon (खेलगांव ओ.पी.)</option>
+                  <option value="Cyber PS Ranchi (साइबर थाना राँची)" class="bg-[#290307]">Cyber PS Ranchi (साइबर थाना राँची)</option>
+                  <option value="Mahila PS Ranchi (महिला थाना राँची)" class="bg-[#290307]">Mahila PS Ranchi (महिला थाना राँची)</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-regalGold-400">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. Blood Group -->
+            <div class="space-y-1.5">
+              <label class="block text-xs sm:text-sm font-bold text-regalGold-200">
+                7. रक्त समूह (Blood Group) <span class="text-red-400">*</span>
+              </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-regalGold-400">
+                  <i data-lucide="droplet" class="w-4 h-4"></i>
+                </div>
+                <select 
+                  id="bloodGroup" 
+                  name="bloodGroup"
+                  required 
+                  class="w-full pl-10 pr-8 py-2.5 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-medium appearance-none transition"
+                >
+                  <option value="" disabled selected class="bg-[#290307]">रक्त समूह चुनें (Select Blood Group)</option>
+                  <option value="A+" class="bg-[#290307]">A+ (ए पॉजिटिव)</option>
+                  <option value="A-" class="bg-[#290307]">A- (ए नेगेटिव)</option>
+                  <option value="B+" class="bg-[#290307]">B+ (बी पॉजिटिव)</option>
+                  <option value="B-" class="bg-[#290307]">B- (बी नेगेटिव)</option>
+                  <option value="O+" class="bg-[#290307]">O+ (ओ पॉजिटिव)</option>
+                  <option value="O-" class="bg-[#290307]">O- (ओ नेगेटिव)</option>
+                  <option value="AB+" class="bg-[#290307]">AB+ (एबी पॉजिटिव)</option>
+                  <option value="AB-" class="bg-[#290307]">AB- (एबी नेगेटिव)</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-regalGold-400">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8. City -->
+            <div class="space-y-1.5">
+              <label class="block text-xs sm:text-sm font-bold text-regalGold-200">
+                8. शहर (City) <span class="text-red-400">*</span>
+              </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-regalGold-400">
+                  <i data-lucide="map-pin" class="w-4 h-4"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="city" 
+                  name="city"
+                  value="राँची / Ranchi" 
+                  required 
+                  class="w-full pl-10 pr-3 py-2.5 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-semibold transition"
+                />
+              </div>
+            </div>
+
+            <!-- 9. State & 10. Address -->
+            <div class="space-y-1.5 md:col-span-2">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs sm:text-sm font-bold text-regalGold-200 mb-1.5">
+                    9. राज्य (State) <span class="text-red-400">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="state" 
+                    name="state"
+                    value="झारखंड / Jharkhand" 
+                    required 
+                    class="w-full px-3 py-2.5 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-semibold transition"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs sm:text-sm font-bold text-regalGold-200 mb-1.5">
+                    10. वर्तमान आवासीय पता (Residential Address) <span class="text-red-400">*</span>
+                  </label>
+                  <textarea 
+                    id="address" 
+                    name="address"
+                    rows="2" 
+                    required 
+                    placeholder="मकान संख्या, मोहल्ला/रोड, लैंडमार्क, वार्ड, राँची"
+                    class="w-full px-3 py-2 bg-[#140103] border border-regalGold-600 rounded-xl text-regalGold-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm resize-none font-medium transition"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Misuse & Disciplinary Undertaking -->
+          <div class="p-4 rounded-2xl bg-[#1F0205] border border-red-500/70 space-y-2">
+            <div class="flex items-start gap-3">
+              <input 
+                type="checkbox" 
+                id="rulesAgreement" 
+                required 
+                class="mt-1 w-4 h-4 text-regalGold-500 rounded border-red-500 focus:ring-regalGold-400 cursor-pointer"
+              />
+              <label for="rulesAgreement" class="text-xs text-regalGold-100 leading-relaxed cursor-pointer font-devanagari">
+                <strong>शपथ एवं अनुशासनात्मक स्वीकृति (Undertaking):</strong> मैं प्रमाणित करता/करती हूँ कि मेरी आयु 18 वर्ष या उससे अधिक है एवं दर्ज सभी विवरण सत्य हैं। <em>"यदि कोई भी व्यक्ति पहचान पत्र का दुरुपयोग करते पाया गया, तो प्रबंधन उसके खिलाफ सख्त कार्रवाई करेगा। पूजा पंडालों के आसपास किसी भी प्रकार की अव्यवस्था, सुरक्षा उल्लंघन अथवा लड़ाई-झगड़े को MBDPSS प्रबंधन द्वारा कतई बर्दाश्त नहीं किया जाएगा।"</em>
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-3 border-t border-regalGold-500/30">
+            <span class="text-xs text-regalGold-300 flex items-center gap-1.5 font-devanagari">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-regalGold-400"></i>
+              सत्यापन उपरांत क्रमिक सीरियल नंबर यूनिक आईडी कार्ड तुरंत तैयार होगा
+            </span>
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+              <button 
+                type="reset" 
+                class="px-5 py-2.5 rounded-xl border border-regalGold-600 hover:bg-[#140103] text-regalGold-200 text-xs sm:text-sm font-semibold transition"
+              >
+                रीसेट
+              </button>
+              <button 
+                type="submit" 
+                id="submitBtn"
+                class="flex-1 sm:flex-none px-8 py-2.5 bg-regalGold-500 hover:bg-regalGold-400 text-maroon-980 font-black rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2 text-xs sm:text-sm btn-luxury-shimmer"
+              >
+                <i data-lucide="check" class="w-4 h-4"></i>
+                <span>पंजीकरण सबमिट करें व ID कार्ड बनाएं</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </section>
+
+
+    <!-- TAB 3: ULTRA-ELEGANT VIRTUAL ID CARD -->
+    <section id="tab-card" class="tab-content hidden space-y-6">
+      
+      <div class="text-center space-y-1.5">
+        <span class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#140103] text-regalGold-300 border border-regalGold-500 font-cinzel">
+          आधिकारिक पहचान पत्र • VIRTUAL VOLUNTEER ID CARD
+        </span>
+        <h2 class="font-hindiCalligraphy text-2xl sm:text-4xl font-bold text-regalGold-200">
+          वर्चुअल स्वयंसेवक पहचान पत्र (Virtual ID Card)
+        </h2>
+        <p class="text-xs sm:text-sm text-regalGold-200/80 font-devanagari">
+          बड़ा फोटो, स्पष्ट नाम, क्रमबद्ध यूनिक सीरियल नंबर, आधिकारिक ब्लू इंक मोहर एवं अध्यक्षीय हस्ताक्षर के साथ।
+        </p>
+      </div>
+
+      <!-- Action Toolbar -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <button onclick="downloadIdCardImage()" class="px-6 py-2.5 bg-regalGold-500 hover:bg-regalGold-400 text-maroon-980 font-black text-xs sm:text-sm rounded-xl shadow-xl flex items-center gap-2 transition btn-luxury-shimmer">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>आईडी कार्ड डाउनलोड करें (PNG Badge)</span>
+        </button>
+        <button onclick="printIdCard()" class="px-5 py-2.5 bg-[#1F0205] hover:bg-[#340409] border-2 border-regalGold-500 text-regalGold-200 text-xs sm:text-sm font-bold rounded-xl flex items-center gap-2 shadow-md transition">
+          <i data-lucide="printer" class="w-4 h-4 text-regalGold-400"></i>
+          <span>प्रिंट करें (Print / PDF)</span>
+        </button>
+        <button onclick="switchTab('form')" class="px-4 py-2.5 bg-[#290307] hover:bg-maroon-850 text-regalGold-200 text-xs sm:text-sm font-semibold rounded-xl flex items-center gap-1.5 border border-regalGold-600">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i>
+          <span>नया पंजीकरण करें</span>
+        </button>
+      </div>
+
+      <!-- Card Frame Display -->
+      <div class="flex justify-center py-2 px-2">
+        
+        <!-- VIRTUAL ID CARD PASS (395px width, High Contrast, Double Stamp) -->
+        <div id="printableIdArea" class="w-full max-w-[395px] bg-white rounded-3xl border-4 border-regalGold-500 shadow-2xl overflow-hidden text-zinc-900 relative select-none" style="min-height: 700px;">
+          
+          <!-- Hologram Security Top Ribbon -->
+          <div class="h-3.5 hologram-strip"></div>
+          
+          <!-- Card Header & Calligraphy Title (Ranchi Mahanagar Security Corps REMOVED) -->
+          <div class="bg-[#210205] px-4 pt-3.5 pb-3 text-center border-b-2 border-regalGold-500 text-regalGold-100 relative">
+            
+            <div class="flex items-center justify-center gap-2 mb-1">
+              <span class="text-regalGold-400 text-xs">🔱</span>
+              <span class="text-[9.5px] font-extrabold tracking-widest text-regalGold-300 uppercase font-cinzel">
+                वर्चुअल स्वयंसेवक पहचान पत्र • VIRTUAL ID CARD
+              </span>
+              <span class="text-regalGold-400 text-xs">🔱</span>
+            </div>
+
+            <!-- Committee Name in Hindi Calligraphy -->
+            <h3 class="font-hindiCalligraphy text-xl sm:text-2xl font-black text-regalGold-300 leading-tight">
+              माँ भवानी दुर्गा पूजा सुरक्षा समिति
+            </h3>
+            <h4 class="font-hindiTitle text-base font-bold text-regalGold-100 mt-0.5">
+              राँची महानगर
+            </h4>
+            
+            <div class="inline-block mt-1.5 px-4 py-0.5 rounded-full bg-regalGold-500 text-maroon-980 font-black text-[10px] tracking-wider uppercase shadow">
+              सुरक्षा स्वयंसेवक • VOLUNTEER PASS
+            </div>
+          </div>
+
+          <!-- Card Body: Large Portrait Photo, Overlapping Blue Stamp, Prominent Name & Details -->
+          <div class="p-4 space-y-3 bg-[#FAF8F5] relative">
+            
+            <!-- Watermark Background -->
+            <div class="absolute inset-0 pointer-events-none opacity-5 flex items-center justify-center">
+              <span class="text-9xl font-bold font-devanagariGotu">माँ</span>
+            </div>
+
+            <!-- BIG VOLUNTEER PORTRAIT WITH BLUE INK STAMP OVERLAY -->
+            <div class="flex justify-center relative">
+              <div class="relative">
+                <div class="w-36 h-44 sm:w-40 sm:h-48 rounded-2xl border-4 border-regalGold-500 overflow-hidden shadow-xl p-1 bg-[#210205]">
+                  <img 
+                    id="cardPhoto" 
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" 
+                    alt="Volunteer Photo" 
+                    class="w-full h-full object-cover rounded-xl"
+                    onerror="this.src='https://placehold.co/400x500/210205/D4AF37?text=MBDPSS+Photo'"
+                  />
+                </div>
+                <!-- Session Pass Tag -->
+                <div class="absolute -bottom-2.5 inset-x-0 mx-auto w-max px-3 py-0.5 bg-[#210205] text-regalGold-300 border border-regalGold-400 font-black text-[9px] rounded-full uppercase shadow font-cinzel">
+                  सत्र 2026 OFFICIAL
+                </div>
+              </div>
+
+              <!-- BLUE INK STAMP #1: Overlapping the Volunteer Photo (Attested Photo Seal) -->
+              <div class="absolute -bottom-4 -right-1 sm:right-3 w-28 h-28 transform -rotate-12 pointer-events-none z-20 stamp-blue-texture">
+                <svg viewBox="0 0 200 200" class="w-full h-full">
+                  <defs>
+                    <path id="photoStampCircleTop" d="M 28,100 A 72,72 0 1,1 172,100" fill="none" />
+                    <path id="photoStampCircleBottom" d="M 172,100 A 72,72 0 1,1 28,100" fill="none" />
+                  </defs>
+                  <!-- Outer Dashed Circle -->
+                  <circle cx="100" cy="100" r="95" stroke="#0d3b82" stroke-width="3" stroke-dasharray="6,4" fill="none" />
+                  <!-- Middle Solid Circle -->
+                  <circle cx="100" cy="100" r="88" stroke="#0d3b82" stroke-width="2" fill="none" />
+                  <!-- Inner Solid Circle -->
+                  <circle cx="100" cy="100" r="62" stroke="#0d3b82" stroke-width="1.8" fill="none" />
+                  <!-- Curved Text Top (Hindi) -->
+                  <text font-family="'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" fill="#0d3b82" letter-spacing="1">
+                    <textPath href="#photoStampCircleTop" startOffset="50%" text-anchor="middle">
+                      माँ भवानी दुर्गा पूजा सुरक्षा समिति
+                    </textPath>
+                  </text>
+                  <!-- Curved Text Bottom (Hindi & English) -->
+                  <text font-family="'Noto Sans Devanagari', sans-serif" font-size="12" font-weight="900" fill="#0d3b82" letter-spacing="1">
+                    <textPath href="#photoStampCircleBottom" startOffset="50%" text-anchor="middle">
+                      ★ राँची महानगर ★ MBDPSS
+                    </textPath>
+                  </text>
+                  <!-- Center Trishul & Stars -->
+                  <g transform="translate(100, 100) scale(0.9)">
+                    <text x="0" y="-8" font-family="'Noto Sans Devanagari', sans-serif" font-size="28" font-weight="900" fill="#0d3b82" text-anchor="middle">🔱</text>
+                    <text x="0" y="16" font-family="'Noto Sans Devanagari', sans-serif" font-size="11" font-weight="900" fill="#0d3b82" text-anchor="middle">सत्यापित</text>
+                    <text x="0" y="30" font-family="'Cinzel', serif" font-size="9" font-weight="900" fill="#0d3b82" text-anchor="middle">VERIFIED</text>
+                  </g>
+                </svg>
+              </div>
+
+            </div>
+
+            <!-- PROMINENT NAME (BIG DISPLAY) -->
+            <div class="text-center pt-2">
+              <h2 id="cardName" class="font-hindiTitle text-xl sm:text-2xl font-black text-maroon-980 leading-snug tracking-tight">
+                अमित कुमार सिंह
+              </h2>
+              <p id="cardNameSub" class="text-xs font-semibold text-zinc-600 font-sans tracking-wide">
+                Amit Kumar Singh
+              </p>
+            </div>
+
+            <!-- Serial Unique ID, Blood Group, Contact, Police Station -->
+            <div class="bg-amber-50/90 rounded-2xl p-3 border border-regalGold-500/50 space-y-2 text-xs relative z-10">
+              
+              <div class="flex items-center justify-between border-b border-regalGold-500/30 pb-1.5">
+                <div>
+                  <span class="text-[9.5px] text-zinc-600 font-semibold block">पहचान पत्र क्र. (Unique Serial ID):</span>
+                  <span id="cardIdNumber" class="font-mono font-black text-xs text-maroon-980">
+                    MBDPSS-2026-0001
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="text-[9.5px] text-zinc-600 font-semibold block">रक्त समूह (Blood Group):</span>
+                  <span id="cardBloodGroup" class="inline-block px-2.5 py-0.5 rounded-md bg-red-100 text-maroon-900 font-black text-xs border border-red-300">
+                    B+ Positive
+                  </span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-[11px] pt-0.5">
+                <div>
+                  <span class="text-[9px] text-zinc-600 font-medium block">मोबाइल (Mobile):</span>
+                  <span id="cardMobile" class="font-mono font-bold text-zinc-900 text-xs">
+                    +91 9835123456
+                  </span>
+                </div>
+                <div>
+                  <span class="text-[9px] text-zinc-600 font-medium block">आधार (Aadhaar):</span>
+                  <span id="cardAadharMasked" class="font-mono font-bold text-zinc-900 text-xs">
+                    XXXX-XXXX-1245
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-1 border-t border-regalGold-500/30">
+                <span class="text-[9px] text-zinc-600 font-medium block">संबंधित थाना क्षेत्र (Police Station):</span>
+                <span id="cardPoliceStation" class="font-bold text-xs text-maroon-900 block truncate">
+                  Argora (अरगोड़ा), राँची
+                </span>
+              </div>
+
+            </div>
+
+            <!-- Verification QR Code & Official Notice -->
+            <div class="flex items-center justify-between px-3 py-2 rounded-xl bg-amber-50/60 border border-regalGold-500/40 relative z-10">
+              <div class="text-[9.5px] text-zinc-800 space-y-0.5 leading-tight font-devanagari">
+                <div><strong class="text-maroon-980">अधिकार क्षेत्र:</strong> राँची महानगर दुर्गा पूजा पंडाल</div>
+                <div><strong class="text-maroon-980">सत्र:</strong> श्री दुर्गा पूजा महोत्सव 2026</div>
+                <div class="text-green-800 font-bold flex items-center gap-1">
+                  <i data-lucide="shield-check" class="w-3 h-3"></i> अधिकृत व अनुशासित स्वयंसेवक
+                </div>
+              </div>
+              <div class="w-12 h-12 bg-white p-1 rounded-lg border border-regalGold-500/50 shrink-0 shadow-xs">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=MBDPSS-VERIFIED-VOLUNTEER-RANCHI-2026" alt="QR" class="w-full h-full object-contain" />
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Card Footer: Stamp on LAST LEFT SIDE & President Signature on Right -->
+          <div class="bg-amber-100/90 px-4 py-3 border-t-2 border-regalGold-500 flex items-center justify-between relative min-h-[105px]">
+            
+            <!-- BLUE INK STAMP #2: AT LAST LEFT SIDE (Bottom-Left Official Committee Stamp) -->
+            <div class="relative w-24 h-24 sm:w-28 sm:h-28 shrink-0 -my-3 stamp-blue-texture transform -rotate-6">
+              <svg viewBox="0 0 200 200" class="w-full h-full">
+                <defs>
+                  <path id="footerStampCircleTop" d="M 28,100 A 72,72 0 1,1 172,100" fill="none" />
+                  <path id="footerStampCircleBottom" d="M 172,100 A 72,72 0 1,1 28,100" fill="none" />
+                </defs>
+                <!-- Outer Dashed Circle -->
+                <circle cx="100" cy="100" r="95" stroke="#0d3b82" stroke-width="3" stroke-dasharray="6,4" fill="none" />
+                <!-- Middle Solid Circle -->
+                <circle cx="100" cy="100" r="88" stroke="#0d3b82" stroke-width="2" fill="none" />
+                <!-- Inner Solid Circle -->
+                <circle cx="100" cy="100" r="62" stroke="#0d3b82" stroke-width="1.8" fill="none" />
+                <!-- Curved Text Top (Hindi) -->
+                <text font-family="'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" fill="#0d3b82" letter-spacing="1">
+                  <textPath href="#footerStampCircleTop" startOffset="50%" text-anchor="middle">
+                    माँ भवानी दुर्गा पूजा सुरक्षा समिति
+                  </textPath>
+                </text>
+                <!-- Curved Text Bottom (Hindi & English) -->
+                <text font-family="'Noto Sans Devanagari', sans-serif" font-size="12" font-weight="900" fill="#0d3b82" letter-spacing="1">
+                  <textPath href="#footerStampCircleBottom" startOffset="50%" text-anchor="middle">
+                    ★ राँची महानगर ★ MBDPSS
+                  </textPath>
+                </text>
+                <!-- Center Trishul & Stars -->
+                <g transform="translate(100, 100) scale(0.9)">
+                  <text x="0" y="-8" font-family="'Noto Sans Devanagari', sans-serif" font-size="28" font-weight="900" fill="#0d3b82" text-anchor="middle">🔱</text>
+                  <text x="0" y="16" font-family="'Noto Sans Devanagari', sans-serif" font-size="11" font-weight="900" fill="#0d3b82" text-anchor="middle">मुहर</text>
+                  <text x="0" y="30" font-family="'Cinzel', serif" font-size="9" font-weight="900" fill="#0d3b82" text-anchor="middle">OFFICIAL SEAL</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- President Signature Block on the Right -->
+            <div class="text-right pl-2">
+              <div class="w-28 sm:w-32 border-b border-dashed border-zinc-700 ml-auto mb-1 flex items-center justify-end">
+                <span class="font-serif italic text-xs text-blue-900 tracking-wider">Raunak Rajput</span>
+              </div>
+              <div class="font-hindiTitle text-sm sm:text-base font-black text-maroon-980 leading-tight">
+                रौनक राजपूत
+              </div>
+              <div class="font-devanagari text-[9.5px] font-bold text-maroon-900 leading-tight">
+                (अध्यक्ष, माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर)
+              </div>
+            </div>
+          </div>
+
+          <!-- Disciplinary Rule Footer on ID Card -->
+          <div class="bg-[#210205] text-regalGold-200 text-[8px] py-1 px-2 text-center tracking-wider font-medium border-t border-regalGold-500 font-devanagari">
+            पहचान पत्र के दुरुपयोग या उपद्रव पर MBDPSS एवं राँची पुलिस द्वारा कठोर दंडात्मक कार्रवाई होगी।
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TAB 4: DISCIPLINARY GUIDELINES -->
+    <section id="tab-guidelines" class="tab-content hidden space-y-6">
+      
+      <div class="text-center space-y-1.5">
+        <span class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#140103] text-regalGold-300 border border-regalGold-500 font-cinzel">
+          MBDPSS DISCIPLINE CODE • सुरक्षा संहिता
+        </span>
+        <h2 class="font-hindiCalligraphy text-2xl sm:text-4xl font-bold text-regalGold-200">
+          सुरक्षा नियम, अनुशासन एवं कानूनी निर्देश
+        </h2>
+        <p class="text-xs sm:text-sm text-regalGold-200/80 font-devanagari">
+          माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर के सभी स्वयंसेवकों हेतु अनिवार्य आचार संहिता।
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <div class="p-6 rounded-3xl border-2 border-regalGold-500 bg-[#290307] shadow-xl space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-red-950 border border-red-500 text-red-300">
+              <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-hindiCalligraphy text-xl font-bold text-regalGold-300">
+              पहचान पत्र (ID Card) दुरुपयोग निषेध
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-regalGold-100 leading-relaxed font-devanagari">
+            यह पहचान पत्र केवल अधिकृत पूजा पंडालों, भीड़ नियंत्रण एवं समिति द्वारा निर्देशित सेवा कार्यों हेतु मान्य है। <em>"यदि कोई भी व्यक्ति पहचान पत्र का दुरुपयोग करते पाया गया, तो प्रबंधन द्वारा उसके विरुद्ध कठोर कानूनी कार्रवाई की जाएगी।"</em>
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl border-2 border-regalGold-500 bg-[#290307] shadow-xl space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-[#140103] border border-regalGold-500 text-regalGold-400">
+              <i data-lucide="shield-off" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-hindiCalligraphy text-xl font-bold text-regalGold-300">
+              लड़ाई-झगड़ा व उपद्रव पर शून्य सहिष्णुता (Zero Tolerance)
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-regalGold-100 leading-relaxed font-devanagari">
+            पूजा पंडालों के आसपास किसी भी प्रकार की अव्यवस्था, सुरक्षा उल्लंघन अथवा लड़ाई-झगड़े को MBDPSS प्रबंधन द्वारा कतई बर्दाश्त नहीं किया जाएगा। ऐसे व्यक्तियों को तुरंत पदमुक्त कर कानूनी कार्रवाई होगी।
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl border-2 border-regalGold-500 bg-[#290307] shadow-xl space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-[#140103] border border-regalGold-500 text-regalGold-400">
+              <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-hindiCalligraphy text-xl font-bold text-regalGold-300">
+              महिला, वृद्ध एवं बाल सुरक्षा सर्वोच्च प्राथमिकता
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-regalGold-100 leading-relaxed font-devanagari">
+            सभी स्वयंसेवक पंडालों में दर्शनार्थियों के प्रति अत्यंत विनम्र एवं सहयोगी व्यवहार रखेंगे। खोए-पाए बच्चों की तुरंत घोषणा, बुजुर्गों हेतु व्हीलचेयर सहायता एवं महिला सुरक्षा दल के साथ निरंतर समन्वय अनिवार्य है।
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl border-2 border-regalGold-500 bg-[#290307] shadow-xl space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-[#140103] border border-regalGold-500 text-regalGold-400">
+              <i data-lucide="phone-call" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-hindiCalligraphy text-xl font-bold text-regalGold-300">
+              स्थानीय थाना एवं आपातकालीन संपर्क
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-regalGold-100 leading-relaxed font-devanagari">
+            किसी भी संदिग्ध वस्तु या असामाजिक गतिविधि की सूचना तुरंत संबंधित स्थानीय थाना प्रभारी (कोटवाली, लालपुर, अरगोड़ा आदि) अथवा केंद्रीय नियंत्रण कक्ष डायल 112 एवं समिति कंट्रोल रूम को दें।
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TAB 5: PASSWORD PROTECTED ADMIN PORTAL (Password: YUVRAJ@BAJAJ0601) -->
+    <section id="tab-admin" class="tab-content hidden space-y-6">
+      
+      <!-- Admin Header Bar -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-3xl bg-[#290307] border-2 border-regalGold-500 shadow-2xl">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-950 text-green-300 border border-green-500 flex items-center gap-1 font-mono">
+              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              Admin Session Active
+            </span>
+            <span class="text-xs text-regalGold-400 font-mono">MBDPSS-RNC-CONTROL</span>
+          </div>
+          <h2 class="font-hindiCalligraphy text-2xl sm:text-3xl font-bold text-regalGold-200 mt-1">
+            प्रबंधन एवं डेटा डाउनलोड नियंत्रण कक्ष
+          </h2>
+          <p class="text-xs text-regalGold-200/80 font-medium font-devanagari">
+            माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर • पंजीकृत स्वयंसेवक डेटाबेस
+          </p>
+        </div>
+
+        <!-- Export Actions -->
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button onclick="exportToExcelCSV()" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md flex items-center gap-1.5 transition">
+            <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+            <span>एक्सेल डाउनलोड (Excel/CSV)</span>
+          </button>
+          
+          <button onclick="exportDataToPDF()" class="px-4 py-2 bg-regalGold-500 hover:bg-regalGold-400 text-maroon-980 font-black text-xs sm:text-sm rounded-xl shadow-md flex items-center gap-1.5 transition btn-luxury-shimmer">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            <span>डेटा PDF रिपोर्ट</span>
+          </button>
+
+          <button onclick="openCloudConfigModal()" class="px-3.5 py-2 bg-[#140103] hover:bg-[#340409] text-regalGold-300 border border-regalGold-500 text-xs sm:text-sm font-semibold rounded-xl flex items-center gap-1.5">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>Drive / Email Config</span>
+          </button>
+
+          <button onclick="logoutAdmin()" class="px-3 py-2 bg-red-950 hover:bg-red-900 text-red-200 border border-red-500 text-xs sm:text-sm font-semibold rounded-xl flex items-center gap-1 transition">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+            <span>लॉगआउट</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cloud Sync & Storage Email Notice -->
+      <div class="p-4 rounded-2xl border border-regalGold-500/50 bg-[#1F0205] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2 text-regalGold-100">
+          <i data-lucide="inbox" class="w-4 h-4 text-regalGold-400"></i>
+          <span>समिति डेटा संग्रहण ई-मेल (Drive Storage):</span>
+          <span class="font-mono text-regalGold-300 bg-[#38050B] px-2.5 py-0.5 rounded border border-regalGold-500 font-bold">mbdps.rnc@gmail.com</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="text-regalGold-200 flex items-center gap-2 font-medium">
+            <span>कुल पंजीकृत स्वयंसेवक:</span>
+            <span id="totalVolunteersBadge" class="px-2.5 py-0.5 rounded-full bg-regalGold-500 text-maroon-980 font-bold font-mono text-xs">3</span>
+          </div>
+          <button onclick="confirmBulkReset()" class="text-red-400 hover:text-red-300 underline text-xs font-semibold">
+            डेटा रीसेट करें
+          </button>
+        </div>
+      </div>
+
+      <!-- Volunteer Data Table Container with Delete Operations -->
+      <div class="rounded-3xl border-2 border-regalGold-500 bg-[#290307] overflow-hidden shadow-2xl">
+        <div class="p-4 border-b border-regalGold-500/30 flex flex-wrap items-center justify-between gap-3 bg-[#140103]">
+          <div class="relative flex-1 min-w-[220px] max-w-xs">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3 top-2.5 text-regalGold-400"></i>
+            <input 
+              type="text" 
+              id="adminSearchInput" 
+              placeholder="नाम, थाना या मोबाइल से खोजें..." 
+              oninput="filterVolunteerTable(this.value)"
+              class="w-full pl-9 pr-3 py-1.5 bg-[#290307] border border-regalGold-600 rounded-xl text-xs text-regalGold-100 placeholder-zinc-500 focus:outline-none focus:border-regalGold-400"
+            />
+          </div>
+          <div class="text-xs text-regalGold-300 font-medium font-devanagari">
+            * एडमिन द्वारा किसी भी स्वयंसेवक का रिकॉर्ड सीधे डिलीट किया जा सकता है
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs" id="volunteerTable">
+            <thead class="bg-[#140103] text-regalGold-300 uppercase border-b border-regalGold-500/40 font-bold tracking-wider">
+              <tr>
+                <th class="p-3">सीरियल ID</th>
+                <th class="p-3">फोटो</th>
+                <th class="p-3">नाम (Name)</th>
+                <th class="p-3">मोबाइल</th>
+                <th class="p-3">आधार संख्या</th>
+                <th class="p-3">स्थानीय थाना</th>
+                <th class="p-3">रक्त</th>
+                <th class="p-3">आयु</th>
+                <th class="p-3 text-center">कार्रवाई (Actions)</th>
+              </tr>
+            </thead>
+            <tbody id="volunteerTableBody" class="divide-y divide-[#38050B] text-regalGold-100">
+              <!-- Dynamically populated rows with delete option -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ADMIN LOGIN MODAL (Password: YUVRAJ@BAJAJ0601) -->
+  <div id="adminLoginModal" class="fixed inset-0 z-50 bg-black/85 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="w-full max-w-md bg-[#290307] border-2 border-regalGold-500 rounded-3xl p-6 shadow-2xl space-y-4 relative text-regalGold-100 view-enter">
+      
+      <div class="text-center space-y-1">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-[#140103] border border-regalGold-400 flex items-center justify-center text-regalGold-300 mb-2 shadow-inner">
+          <i data-lucide="lock" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-hindiCalligraphy text-xl font-bold text-regalGold-200">
+          प्रशासनिक लॉगिन • MBDPSS प्रबंधन
+        </h3>
+        <p class="text-xs text-regalGold-300/80 font-devanagari">
+          माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर
+        </p>
+      </div>
+
+      <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+        <div class="space-y-1.5">
+          <label class="block text-xs font-bold text-regalGold-200">
+            एडमिन सुरक्षा पासवर्ड (Admin Password)
+          </label>
+          <div class="relative">
+            <input 
+              type="password" 
+              id="adminPasswordInput" 
+              required 
+              placeholder="पासवर्ड दर्ज करें..." 
+              class="w-full px-3 py-2.5 bg-[#140103] border border-regalGold-500 rounded-xl text-regalGold-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-regalGold-400 text-sm font-mono"
+            />
+            <button 
+              type="button" 
+              onclick="togglePasswordVisibility()" 
+              class="absolute right-3 top-2.5 text-regalGold-400 hover:text-regalGold-200"
+            >
+              <i data-lucide="eye" id="eyeIcon" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <p id="adminErrorMsg" class="text-xs text-red-400 hidden font-bold">अमान्य पासवर्ड! कृपया सही पासवर्ड दर्ज करें।</p>
+        </div>
+
+        <div class="p-3 rounded-xl bg-[#140103] border border-regalGold-500/40 text-[11px] text-regalGold-200 font-medium font-devanagari">
+          <span class="text-regalGold-400 font-bold">सुरक्षा निर्देश:</span> यह क्षेत्र केवल अधिकृत समिति पदाधिकारियों हेतु आरक्षित है।
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button 
+            type="button" 
+            onclick="closeAdminModal()" 
+            class="px-4 py-2 rounded-xl border border-regalGold-500 hover:bg-[#140103] text-regalGold-200 text-xs font-semibold"
+          >
+            रद्द करें
+          </button>
+          <button 
+            type="submit" 
+            class="px-5 py-2 rounded-xl bg-regalGold-500 hover:bg-regalGold-400 text-maroon-980 font-black text-xs shadow-md btn-luxury-shimmer"
+          >
+            लॉगिन करें
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- DELETE CONFIRMATION MODAL -->
+  <div id="deleteConfirmModal" class="fixed inset-0 z-50 bg-black/85 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="w-full max-w-sm bg-[#290307] border-2 border-red-500 rounded-3xl p-6 shadow-2xl space-y-4 text-regalGold-100 view-enter">
+      <div class="text-center space-y-2">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-red-950 border border-red-500 flex items-center justify-center text-red-400">
+          <i data-lucide="trash-2" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-hindiCalligraphy text-xl font-bold text-red-300">
+          रिकॉर्ड हटाने की पुष्टि
+        </h3>
+        <p id="deleteModalText" class="text-xs text-regalGold-200 leading-relaxed font-devanagari">
+          क्या आप इस स्वयंसेवक का डेटा स्थायी रूप से हटाना चाहते हैं?
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-3 pt-2">
+        <button 
+          onclick="closeDeleteModal()" 
+          class="px-4 py-2 rounded-xl border border-regalGold-600 hover:bg-[#140103] text-regalGold-200 text-xs font-semibold"
+        >
+          नहीं, रद्द करें
+        </button>
+        <button 
+          id="confirmDeleteActionBtn"
+          onclick="executeDeleteVolunteer()" 
+          class="px-5 py-2 rounded-xl bg-red-700 hover:bg-red-600 text-white font-black text-xs shadow"
+        >
+          हाँ, डिलीट करें
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRIVE / EMAIL BACKUP CONFIG MODAL -->
+  <div id="driveConfigModal" class="fixed inset-0 z-50 bg-black/85 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="w-full max-w-lg bg-[#290307] border-2 border-regalGold-500 rounded-3xl p-6 shadow-2xl space-y-4 relative text-regalGold-100 view-enter">
+      
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="font-hindiCalligraphy text-xl font-bold text-regalGold-200 flex items-center gap-2">
+            <i data-lucide="cloud" class="w-5 h-5 text-regalGold-400"></i>
+            डेटा संग्रहण एवं Google Drive / Gmail सेटअप
+          </h3>
+          <p class="text-xs text-regalGold-300/80">समिति अधिकृत ई-मेल: <span class="text-regalGold-300 font-mono font-bold">mbdps.rnc@gmail.com</span></p>
+        </div>
+        <button onclick="closeCloudConfigModal()" class="text-zinc-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs text-regalGold-100 leading-relaxed bg-[#140103] p-4 rounded-2xl border border-regalGold-500/40">
+        <p class="font-devanagari">
+          प्रत्येक स्वयंसेवक का पंजीकरण डेटा समिति के केंद्रीय ईमेल <strong>mbdps.rnc@gmail.com</strong> से लिंक किए गए Google Sheets/Drive में स्वतः बैकअप हेतु सक्रिय है।
+        </p>
+
+        <div class="space-y-1">
+          <label class="block text-[11px] font-bold text-regalGold-300">Google Apps Script Webhook URL:</label>
+          <input 
+            type="url" 
+            id="customWebhookUrl" 
+            value="https://script.google.com/macros/s/AKfycbz_MBDPSS_RANCHI_DRIVE_STORE/exec"
+            class="w-full px-3 py-1.5 bg-[#290307] border border-regalGold-500 rounded-lg text-xs font-mono text-regalGold-100 focus:outline-none focus:border-regalGold-400"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-end gap-2">
+        <button onclick="saveCloudConfig()" class="px-4 py-2 bg-regalGold-500 text-maroon-980 font-black text-xs rounded-xl hover:bg-regalGold-400 shadow btn-luxury-shimmer">
+          कन्फ़िगरेशन सुरक्षित करें
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none max-w-sm">
+    <div id="toastContent" class="flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl border text-sm font-semibold"></div>
+  </div>
+
+
+  <!-- FOOTER WITH MANDATORY ATTRIBUTION (Small font size in Hindi) -->
+  <footer class="border-t-2 border-regalGold-500 bg-[#140103] py-4 px-4 text-center mt-auto shadow-2xl relative z-10">
+    <div class="max-w-4xl mx-auto space-y-1.5">
+      <div class="flex items-center justify-center gap-2 text-xs text-regalGold-300 font-hindiTitle">
+        <span>🚩 जय माँ भवानी</span>
+        <span>•</span>
+        <span>माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर</span>
+        <span>•</span>
+        <span>सत्यमेव जयते 🚩</span>
+      </div>
+      
+      <!-- User Mandated Credit in Hindi with small font size at the very bottom -->
+      <div class="text-[10px] text-regalGold-200/75 tracking-wide font-devanagari">
+        Created and Designed by : <span class="text-regalGold-300 font-bold">युवराज कनिष्क आर्य (उपाध्यक्ष, MBDPSS, राँची महानगर)</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Admin password
+    const ADMIN_PASSWORD_HASH = "YUVRAJ@BAJAJ0601";
+    let isAdminAuthenticated = false;
+    let uploadedPhotoBase64 = "";
+    let volunteerToDeleteId = null;
+
+    // Direct public fallback image URLs for Maa Durga
+    const DURGA_FALLBACK_URLS = [
+      "https://images.unsplash.com/photo-1601659244093-9c84e1b8c06d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1567591414240-e2b20755eb68?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1570783359678-8314bc3a4e98?auto=format&fit=crop&w=800&q=80"
+    ];
+    let fallbackIndex = 0;
+
+    function handleHeroImageFallback(imgElement) {
+      fallbackIndex++;
+      if (fallbackIndex < DURGA_FALLBACK_URLS.length) {
+        imgElement.src = DURGA_FALLBACK_URLS[fallbackIndex];
+      } else {
+        imgElement.classList.add("hidden");
+        const svgFallback = document.getElementById("svgDurgaFallback");
+        if (svgFallback) svgFallback.classList.remove("hidden");
+      }
+    }
+
+    function handleBgWatermarkFallback(imgElement) {
+      imgElement.src = "https://images.unsplash.com/photo-1570783359678-8314bc3a4e98?auto=format&fit=crop&w=1600&q=80";
+    }
+
+    function handleCustomDurgaUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = document.getElementById("heroMaaDurgaImg");
+          const bgImg = document.getElementById("bgWatermarkImg");
+          const svgFallback = document.getElementById("svgDurgaFallback");
+          
+          if (img) {
+            img.src = e.target.result;
+            img.classList.remove("hidden");
+          }
+          if (bgImg) bgImg.src = e.target.result;
+          if (svgFallback) svgFallback.classList.add("hidden");
+
+          showToast("माँ दुर्गा का फोटो सफलतापूर्वक अपडेट किया गया!", "success");
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Seed Dataset with serial IDs
+    const INITIAL_VOLUNTEERS = [
+      {
+        id: "MBDPSS-2026-0001",
+        serial: 1,
+        fullName: "अमित कुमार सिंह (Amit Kumar Singh)",
+        dob: "1998-04-12",
+        age: 28,
+        address: "हरमू हाउसिंग कॉलोनी, रोड नं. 4, राँची",
+        mobile: "9835123456",
+        aadhar: "4521 8963 1245",
+        policeStation: "Argora (अरगोड़ा)",
+        bloodGroup: "B+",
+        city: "राँची / Ranchi",
+        state: "झारखंड / Jharkhand",
+        photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
+        registeredAt: "2026-10-01 10:30"
+      },
+      {
+        id: "MBDPSS-2026-0002",
+        serial: 2,
+        fullName: "विकास मुंडा (Vikas Munda)",
+        dob: "2000-08-20",
+        age: 26,
+        address: "मेन रोड, चर्च कॉम्प्लेक्स के समीप, राँची",
+        mobile: "9431109876",
+        aadhar: "8899 4455 2211",
+        policeStation: "Kotwali (कोतवाली)",
+        bloodGroup: "O+",
+        city: "राँची / Ranchi",
+        state: "झारखंड / Jharkhand",
+        photoUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
+        registeredAt: "2026-10-02 14:15"
+      },
+      {
+        id: "MBDPSS-2026-0003",
+        serial: 3,
+        fullName: "रोहित तिवारी (Rohit Tiwari)",
+        dob: "1995-11-05",
+        age: 30,
+        address: "डोरंडा बाजार, नियर राजेंद्र चौक, राँची",
+        mobile: "9122334455",
+        aadhar: "7744 1122 3366",
+        policeStation: "Doranda (डोरंडा)",
+        bloodGroup: "AB+",
+        city: "राँची / Ranchi",
+        state: "झारखंड / Jharkhand",
+        photoUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
+        registeredAt: "2026-10-03 09:45"
+      }
+    ];
+
+    // Storage access
+    function getStoredVolunteers() {
+      const stored = localStorage.getItem("mbdpss_volunteers_list");
+      if (!stored) {
+        localStorage.setItem("mbdpss_volunteers_list", JSON.stringify(INITIAL_VOLUNTEERS));
+        localStorage.setItem("mbdpss_last_serial", "3");
+        return INITIAL_VOLUNTEERS;
+      }
+      try {
+        return JSON.parse(stored);
+      } catch (e) {
+        return INITIAL_VOLUNTEERS;
+      }
+    }
+
+    function saveStoredVolunteers(list) {
+      localStorage.setItem("mbdpss_volunteers_list", JSON.stringify(list));
+      updateVolunteerCount();
+    }
+
+    function getNextSerialId() {
+      let lastSerial = parseInt(localStorage.getItem("mbdpss_last_serial") || "0", 10);
+      if (isNaN(lastSerial) || lastSerial < 3) {
+        const list = getStoredVolunteers();
+        lastSerial = list.reduce((max, item) => Math.max(max, item.serial || 0), 0);
+        if (lastSerial === 0) lastSerial = 3;
+      }
+      const newSerial = lastSerial + 1;
+      localStorage.setItem("mbdpss_last_serial", newSerial.toString());
+      return {
+        serialNumber: newSerial,
+        formattedId: `MBDPSS-2026-${String(newSerial).padStart(4, '0')}`
+      };
+    }
+
+    function updateVolunteerCount() {
+      const list = getStoredVolunteers();
+      const badge = document.getElementById("totalVolunteersBadge");
+      if (badge) badge.innerText = list.length;
+    }
+
+    // Tab Navigation
+    function switchTab(tabId) {
+      const tabs = ['home', 'form', 'card', 'guidelines', 'admin'];
+      tabs.forEach(t => {
+        const sec = document.getElementById(`tab-${t}`);
+        const btn = document.getElementById(`nav-btn-${t}`);
+        if (sec) {
+          sec.classList.add('hidden');
+          sec.classList.remove('view-enter');
+        }
+        if (btn) {
+          btn.classList.remove('bg-regalGold-500', 'text-maroon-980', 'font-bold', 'shadow-md', 'btn-luxury-shimmer');
+          btn.classList.add('bg-maroon-950', 'text-regalGold-200');
+        }
+      });
+
+      const targetSec = document.getElementById(`tab-${tabId}`);
+      const targetBtn = document.getElementById(`nav-btn-${tabId}`);
+      if (targetSec) {
+        targetSec.classList.remove('hidden');
+        void targetSec.offsetWidth;
+        targetSec.classList.add('view-enter');
+      }
+      if (targetBtn) {
+        targetBtn.classList.remove('bg-maroon-950', 'text-regalGold-200');
+        targetBtn.classList.add('bg-regalGold-500', 'text-maroon-980', 'font-bold', 'shadow-md', 'btn-luxury-shimmer');
+      }
+
+      if (tabId === 'admin') {
+        if (!isAdminAuthenticated) {
+          openAdminModal();
+        } else {
+          renderVolunteerTable();
+        }
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Name Validation: Letters only
+    function validateNameInput(input) {
+      const validPattern = /^[A-Za-z\s\u0900-\u097F()]*$/;
+      const errorEl = document.getElementById("nameError");
+      if (!validPattern.test(input.value)) {
+        input.value = input.value.replace(/[^A-Za-z\s\u0900-\u097F()]/g, '');
+        if (errorEl) errorEl.classList.remove("hidden");
+      } else {
+        if (errorEl) errorEl.classList.add("hidden");
+      }
+    }
+
+    // Digits only
+    function validateDigitsOnly(input, maxLen) {
+      input.value = input.value.replace(/\D/g, '').slice(0, maxLen);
+      const errorEl = document.getElementById("mobileError");
+      if (input.value.length > 0 && input.value.length < 10) {
+        if (errorEl) errorEl.classList.remove("hidden");
+      } else {
+        if (errorEl) errorEl.classList.add("hidden");
+      }
+    }
+
+    // Aadhaar formatting
+    function formatAadharNumber(input) {
+      let raw = input.value.replace(/\D/g, '').slice(0, 12);
+      let formatted = "";
+      for (let i = 0; i < raw.length; i++) {
+        if (i > 0 && i % 4 === 0) formatted += " ";
+        formatted += raw[i];
+      }
+      input.value = formatted;
+      const errorEl = document.getElementById("aadharError");
+      if (raw.length > 0 && raw.length < 12) {
+        if (errorEl) errorEl.classList.remove("hidden");
+      } else {
+        if (errorEl) errorEl.classList.add("hidden");
+      }
+    }
+
+    // Age Calculation & Strict >= 18 Enforcement
+    function calculateAge(dobString) {
+      if (!dobString) return 0;
+      const birthDate = new Date(dobString);
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      return age;
+    }
+
+    function checkAgeEligibility(dobValue) {
+      const feedback = document.getElementById("ageFeedback");
+      if (!dobValue) {
+        feedback.innerText = "";
+        return false;
+      }
+      const age = calculateAge(dobValue);
+      if (age < 18) {
+        feedback.className = "text-xs text-red-400 font-bold block";
+        feedback.innerText = `⛔ अस्वीकृत: आपकी आयु केवल ${age} वर्ष है। 18 वर्ष से कम आयु वाले स्वयंसेवकों को फॉर्म भरने की अनुमति नहीं है!`;
+        return false;
+      } else {
+        feedback.className = "text-xs text-regalGold-300 font-semibold block";
+        feedback.innerText = `✓ स्वीकृत आयु: ${age} वर्ष (सुरक्षा स्वयंसेवक हेतु पूर्णतः पात्र)`;
+        return true;
+      }
+    }
+
+    // Photo Preview handler
+    function handlePhotoUpload(event) {
+      const file = event.target.files[0];
+      const preview = document.getElementById("photoPreview");
+      const placeholder = document.getElementById("photoPlaceholderIcon");
+      const fileNameLabel = document.getElementById("photoFileName");
+
+      if (file) {
+        if (file.size > 3 * 1024 * 1024) {
+          showToast("फोटो का आकार 3MB से कम होना चाहिए!", "error");
+          event.target.value = "";
+          return;
+        }
+
+        fileNameLabel.innerText = file.name;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          uploadedPhotoBase64 = e.target.result;
+          preview.src = uploadedPhotoBase64;
+          preview.classList.remove("hidden");
+          placeholder.classList.add("hidden");
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Form Submit Handler
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const dob = document.getElementById("dob").value;
+      const mobile = document.getElementById("mobile").value.trim();
+      const aadhar = document.getElementById("aadhar").value.replace(/\s/g, '');
+      const policeStation = document.getElementById("policeStation").value;
+      const bloodGroup = document.getElementById("bloodGroup").value;
+      const city = document.getElementById("city").value.trim();
+      const state = document.getElementById("state").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const rulesAccepted = document.getElementById("rulesAgreement").checked;
+
+      if (!fullName) {
+        showToast("कृपया पूरा नाम दर्ज करें", "error");
+        return;
+      }
+      if (!uploadedPhotoBase64) {
+        showToast("कृपया अपनी पासपोर्ट फोटो अपलोड करें", "error");
+        return;
+      }
+      const age = calculateAge(dob);
+      if (age < 18) {
+        showToast("अमान्य आयु: 18 वर्ष से कम आयु वाले स्वयंसेवक फॉर्म नहीं भर सकते!", "error");
+        return;
+      }
+      if (mobile.length !== 10) {
+        showToast("कृपया सही 10 अंकों का मोबाइल नंबर दर्ज करें", "error");
+        return;
+      }
+      if (aadhar.length !== 12) {
+        showToast("कृपया 12 अंकों की वैध आधार संख्या दर्ज करें", "error");
+        return;
+      }
+      if (!policeStation) {
+        showToast("कृपया राँची जिले का स्थानीय थाना चुनें", "error");
+        return;
+      }
+      if (!bloodGroup) {
+        showToast("कृपया रक्त समूह चुनें", "error");
+        return;
+      }
+      if (!rulesAccepted) {
+        showToast("कृपया अनुशासन एवं सुरक्षा नियमों की सहमति पर टिक करें", "error");
+        return;
+      }
+
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>पंजीकरण सत्यापित किया जा रहा है...</span>`;
+
+      // Generate Serial-wise Unique ID Number
+      const serialData = getNextSerialId();
+
+      const newVolunteer = {
+        id: serialData.formattedId,
+        serial: serialData.serialNumber,
+        fullName: fullName,
+        dob: dob,
+        age: age,
+        address: address,
+        mobile: mobile,
+        aadhar: aadhar.replace(/(\d{4})/g, '$1 ').trim(),
+        policeStation: policeStation,
+        bloodGroup: bloodGroup,
+        city: city,
+        state: state,
+        photoUrl: uploadedPhotoBase64,
+        registeredAt: new Date().toISOString().replace('T', ' ').slice(0, 16)
+      };
+
+      const currentList = getStoredVolunteers();
+      currentList.unshift(newVolunteer);
+      saveStoredVolunteers(currentList);
+
+      populateIdCard(newVolunteer);
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<i data-lucide="check" class="w-4 h-4"></i><span>पंजीकरण सबमिट करें व ID कार्ड बनाएं</span>`;
+        lucide.createIcons();
+
+        showToast(`पंजीकरण सफल! आपका क्रमिक आईडी: ${serialData.formattedId}`, "success");
+        
+        document.getElementById("volunteerForm").reset();
+        document.getElementById("photoPreview").classList.add("hidden");
+        document.getElementById("photoPlaceholderIcon").classList.remove("hidden");
+        document.getElementById("photoFileName").innerText = "कोई फोटो नहीं चुनी गई";
+        document.getElementById("ageFeedback").innerText = "";
+        uploadedPhotoBase64 = "";
+
+        switchTab('card');
+      }, 500);
+    }
+
+    // Populate Virtual ID Card with Big Photo & Blue Ink Stamp
+    function populateIdCard(data) {
+      const nameParts = data.fullName.split('(');
+      const primaryName = nameParts[0].trim();
+      const secondaryName = nameParts.length > 1 ? nameParts[1].replace(')', '').trim() : '';
+
+      document.getElementById("cardName").innerText = primaryName;
+      const subEl = document.getElementById("cardNameSub");
+      if (secondaryName) {
+        subEl.innerText = secondaryName;
+        subEl.classList.remove("hidden");
+      } else {
+        subEl.innerText = primaryName;
+      }
+
+      document.getElementById("cardIdNumber").innerText = data.id;
+      document.getElementById("cardBloodGroup").innerText = data.bloodGroup + " Positive";
+      document.getElementById("cardMobile").innerText = `+91 ${data.mobile}`;
+      document.getElementById("cardPoliceStation").innerText = `${data.policeStation}, राँची`;
+      
+      const cleanAadhar = data.aadhar.replace(/\s/g, '');
+      const masked = "XXXX-XXXX-" + (cleanAadhar.length >= 4 ? cleanAadhar.slice(-4) : "0000");
+      document.getElementById("cardAadharMasked").innerText = masked;
+
+      if (data.photoUrl) {
+        document.getElementById("cardPhoto").src = data.photoUrl;
+      }
+    }
+
+    // High-Resolution ID Card Download
+    function downloadIdCardImage() {
+      const cardElement = document.getElementById("printableIdArea");
+      showToast("आईडी कार्ड तैयार किया जा रहा है...", "info");
+
+      html2canvas(cardElement, {
+        scale: 3,
+        useCORS: true,
+        backgroundColor: "#FFFFFF",
+        logging: false
+      }).then(canvas => {
+        const link = document.createElement("a");
+        const idName = document.getElementById("cardIdNumber").innerText.trim();
+        link.download = `MBDPSS_Virtual_ID_${idName}.png`;
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+        showToast("वर्चुअल पहचान पत्र सफलतापूर्वक डाउनलोड हुआ!", "success");
+      }).catch(err => {
+        console.error(err);
+        showToast("डाउनलोड में समस्या आई, कृपया 'प्रिंट' बटन का उपयोग करें", "error");
+      });
+    }
+
+    function printIdCard() {
+      window.print();
+    }
+
+    // Admin Authentication Handlers
+    function openAdminModal() {
+      if (isAdminAuthenticated) {
+        switchTab('admin');
+        return;
+      }
+      const modal = document.getElementById("adminLoginModal");
+      modal.classList.remove("hidden");
+      document.getElementById("adminPasswordInput").focus();
+    }
+
+    function closeAdminModal() {
+      document.getElementById("adminLoginModal").classList.add("hidden");
+      document.getElementById("adminErrorMsg").classList.add("hidden");
+      document.getElementById("adminPasswordInput").value = "";
+    }
+
+    function togglePasswordVisibility() {
+      const passInput = document.getElementById("adminPasswordInput");
+      passInput.type = passInput.type === "password" ? "text" : "password";
+    }
+
+    function handleAdminLogin(event) {
+      event.preventDefault();
+      const enteredPassword = document.getElementById("adminPasswordInput").value;
+      const errorMsg = document.getElementById("adminErrorMsg");
+
+      if (enteredPassword === ADMIN_PASSWORD_HASH) {
+        isAdminAuthenticated = true;
+        closeAdminModal();
+        showToast("एडमिन प्रमाणीकरण सफल! स्वागत है।", "success");
+        renderVolunteerTable();
+        switchTab('admin');
+      } else {
+        errorMsg.classList.remove("hidden");
+        document.getElementById("adminPasswordInput").value = "";
+      }
+    }
+
+    function logoutAdmin() {
+      isAdminAuthenticated = false;
+      showToast("एडमिन सत्र समाप्त हुआ।", "info");
+      switchTab('home');
+    }
+
+    // Admin Table Rendering with Delete Action
+    function renderVolunteerTable(filterText = "") {
+      const list = getStoredVolunteers();
+      const tbody = document.getElementById("volunteerTableBody");
+      tbody.innerHTML = "";
+
+      const filtered = list.filter(v => {
+        if (!filterText) return true;
+        const q = filterText.toLowerCase();
+        return (
+          v.fullName.toLowerCase().includes(q) ||
+          v.policeStation.toLowerCase().includes(q) ||
+          v.mobile.includes(q) ||
+          v.id.toLowerCase().includes(q)
+        );
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" class="p-6 text-center text-zinc-400 font-devanagari">कोई रिकॉर्ड नहीं मिला।</td></tr>`;
+        return;
+      }
+
+      filtered.forEach((vol) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-[#38050B] transition-colors border-b border-[#38050B]";
+        tr.innerHTML = `
+          <td class="p-3 font-mono font-bold text-regalGold-300">${vol.id}</td>
+          <td class="p-3">
+            <img src="${vol.photoUrl}" alt="Photo" class="w-10 h-10 object-cover rounded-lg border border-regalGold-500 shadow-md" onerror="this.src='https://placehold.co/100x100/210205/D4AF37?text=Photo'" />
+          </td>
+          <td class="p-3 font-bold text-regalGold-100">${vol.fullName}</td>
+          <td class="p-3 font-mono text-regalGold-200">${vol.mobile}</td>
+          <td class="p-3 font-mono text-zinc-300">${vol.aadhar}</td>
+          <td class="p-3 text-regalGold-300 font-semibold">${vol.policeStation}</td>
+          <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#140103] text-regalGold-300 font-bold border border-regalGold-600">${vol.bloodGroup}</span></td>
+          <td class="p-3 text-zinc-300">${vol.dob} (${vol.age || calculateAge(vol.dob)} वर्ष)</td>
+          <td class="p-3 text-center">
+            <div class="flex items-center justify-center gap-2">
+              <button onclick="viewVolunteerCard('${vol.id}')" title="कार्ड देखें" class="px-2.5 py-1 bg-regalGold-500 hover:bg-regalGold-400 text-maroon-980 rounded-lg font-bold text-[11px] shadow transition btn-luxury-shimmer">
+                आईडी देखें
+              </button>
+              <button onclick="promptDeleteVolunteer('${vol.id}', '${vol.fullName.replace(/'/g, "\\'")}')" title="डिलीट करें" class="px-2.5 py-1 bg-red-800 hover:bg-red-700 text-white rounded-lg font-bold text-[11px] border border-red-500 shadow transition flex items-center gap-1">
+                <i data-lucide="trash" class="w-3 h-3"></i>
+                <span>डिलीट</span>
+              </button>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      lucide.createIcons();
+      updateVolunteerCount();
+    }
+
+    function filterVolunteerTable(query) {
+      renderVolunteerTable(query);
+    }
+
+    function viewVolunteerCard(volId) {
+      const list = getStoredVolunteers();
+      const target = list.find(v => v.id === volId);
+      if (target) {
+        populateIdCard(target);
+        switchTab('card');
+        showToast(`${target.fullName} का आईडी कार्ड लोड किया गया`, "info");
+      }
+    }
+
+    // Delete Operations
+    function promptDeleteVolunteer(volId, volName) {
+      volunteerToDeleteId = volId;
+      const modal = document.getElementById("deleteConfirmModal");
+      const text = document.getElementById("deleteModalText");
+      text.innerHTML = `क्या आप स्वयंसेवक <strong>"${volName}"</strong> (आईडी: ${volId}) का रिकॉर्ड स्थायी रूप से हटाना चाहते हैं?`;
+      modal.classList.remove("hidden");
+    }
+
+    function closeDeleteModal() {
+      volunteerToDeleteId = null;
+      document.getElementById("deleteConfirmModal").classList.add("hidden");
+    }
+
+    function executeDeleteVolunteer() {
+      if (!volunteerToDeleteId) return;
+
+      let list = getStoredVolunteers();
+      list = list.filter(v => v.id !== volunteerToDeleteId);
+      saveStoredVolunteers(list);
+
+      closeDeleteModal();
+      renderVolunteerTable();
+      showToast("स्वयंसेवक रिकॉर्ड सफलतापूर्वक हटा दिया गया!", "success");
+    }
+
+    function confirmBulkReset() {
+      if (confirm("चेतावनी: क्या आप सभी रिकॉर्ड रीसेट करना चाहते हैं?")) {
+        localStorage.setItem("mbdpss_volunteers_list", JSON.stringify(INITIAL_VOLUNTEERS));
+        localStorage.setItem("mbdpss_last_serial", "3");
+        renderVolunteerTable();
+        showToast("डेटा प्रारंभिक स्थिति में रीसेट किया गया।", "info");
+      }
+    }
+
+    // Export to Excel / CSV with UTF-8 BOM
+    function exportToExcelCSV() {
+      const list = getStoredVolunteers();
+      if (!list.length) {
+        showToast("निर्यात करने के लिए कोई डेटा उपलब्ध नहीं है!", "error");
+        return;
+      }
+
+      let csvContent = "\uFEFF"; 
+      csvContent += "क्रम संख्या (Serial),आईडी (Unique ID),पूरा नाम (Full Name),जन्म तिथि (DOB),आयु (Age),मोबाइल नंबर (Mobile),आधार संख्या (Aadhar),स्थानीय थाना (Police Station),रक्त समूह (Blood Group),शहर (City),राज्य (State),वर्तमान पता (Address),पंजीकरण समय\n";
+
+      list.forEach((v, index) => {
+        const cleanAddress = (v.address || "").replace(/"/g, '""');
+        const cleanName = (v.fullName || "").replace(/"/g, '""');
+        const row = [
+          `"${v.serial || (index + 1)}"`,
+          `"${v.id}"`,
+          `"${cleanName}"`,
+          `"${v.dob}"`,
+          `"${v.age || calculateAge(v.dob)}"`,
+          `"${v.mobile}"`,
+          `"'${v.aadhar}"`,
+          `"${v.policeStation}"`,
+          `"${v.bloodGroup}"`,
+          `"${v.city}"`,
+          `"${v.state}"`,
+          `"${cleanAddress}"`,
+          `"${v.registeredAt || ''}"`
+        ];
+        csvContent += row.join(",") + "\n";
+      });
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `MBDPSS_Ranchi_Volunteers_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      showToast("एक्सेल (CSV) डेटा सफलतापूर्वक डाउनलोड हुआ!", "success");
+    }
+
+    // PDF / Print Report Generator
+    function exportDataToPDF() {
+      const list = getStoredVolunteers();
+      if (!list.length) {
+        showToast("पीडीएफ हेतु कोई डेटा नहीं मिला!", "error");
+        return;
+      }
+
+      const printWindow = window.open('', '_blank');
+      let html = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>MBDPSS Ranchi - Volunteer Records</title>
+          <style>
+            body { font-family: sans-serif; padding: 25px; color: #222; }
+            h2, h4 { text-align: center; margin: 4px; color: #38050B; }
+            table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 11px; }
+            th, td { border: 1px solid #777; padding: 7px; text-align: left; }
+            th { background-color: #FDF4D8; color: #38050B; }
+            .header-bar { border-bottom: 2px solid #D4AF37; padding-bottom: 12px; margin-bottom: 15px; }
+            .footer { margin-top: 25px; text-align: right; font-size: 11px; }
+          </style>
+        </head>
+        <body>
+          <div class="header-bar">
+            <h2>माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर</h2>
+            <h4>पंजीकृत स्वयंसेवक मास्टर डेटा तालिका (सत्र 2026-2027)</h4>
+            <div style="text-align: center; font-size: 11px; color: #555;">अधिकृत ई-मेल: mbdps.rnc@gmail.com</div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>क्र.</th>
+                <th>सीरियल आईडी</th>
+                <th>नाम (Name)</th>
+                <th>मोबाइल</th>
+                <th>आधार संख्या</th>
+                <th>स्थानीय थाना</th>
+                <th>रक्त</th>
+                <th>आयु</th>
+                <th>पता</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+
+      list.forEach((v, i) => {
+        html += `
+          <tr>
+            <td>${i+1}</td>
+            <td><strong>${v.id}</strong></td>
+            <td>${v.fullName}</td>
+            <td>${v.mobile}</td>
+            <td>${v.aadhar}</td>
+            <td>${v.policeStation}</td>
+            <td>${v.bloodGroup}</td>
+            <td>${v.age || calculateAge(v.dob)} वर्ष</td>
+            <td>${v.address}</td>
+          </tr>
+        `;
+      });
+
+      html += `
+            </tbody>
+          </table>
+          <div class="footer">
+            <p><strong>प्रमाणित हस्ताक्षरकर्ता:</strong> रौनक राजपूत (अध्यक्ष, माँ भवानी दुर्गा पूजा सुरक्षा समिति, राँची महानगर)</p>
+            <p style="font-size: 10px; color: #777;">सिस्टम निर्माता: युवराज कनिष्क आर्य (उपाध्यक्ष)</p>
+          </div>
+        </body>
+        </html>
+      `;
+
+      printWindow.document.write(html);
+      printWindow.document.close();
+      printWindow.focus();
+      setTimeout(() => {
+        printWindow.print();
+      }, 500);
+    }
+
+    // Cloud Config modal actions
+    function openCloudConfigModal() {
+      document.getElementById("driveConfigModal").classList.remove("hidden");
+    }
+    function closeCloudConfigModal() {
+      document.getElementById("driveConfigModal").classList.add("hidden");
+    }
+    function saveCloudConfig() {
+      const url = document.getElementById("customWebhookUrl").value;
+      localStorage.setItem("mbdpss_cloud_webhook", url);
+      closeCloudConfigModal();
+      showToast("Google Drive / mbdps.rnc@gmail.com विन्यास सुरक्षित हुआ!", "success");
+    }
+
+    // Toast UI
+    function showToast(message, type = "info") {
+      const toast = document.getElementById("toastNotification");
+      const content = document.getElementById("toastContent");
+
+      if (type === "success") {
+        content.className = "flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-xl border text-sm font-semibold bg-emerald-950 border-emerald-500 text-emerald-100";
+        content.innerHTML = `<span class="text-emerald-400 text-base">✓</span> <span>${message}</span>`;
+      } else if (type === "error") {
+        content.className = "flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-xl border text-sm font-semibold bg-red-950 border-red-500 text-red-100";
+        content.innerHTML = `<span class="text-red-400 text-base">⚠</span> <span>${message}</span>`;
+      } else {
+        content.className = "flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-xl border text-sm font-semibold bg-[#290307] border-regalGold-500 text-regalGold-100";
+        content.innerHTML = `<span class="text-regalGold-400 text-base">ℹ</span> <span>${message}</span>`;
+      }
+
+      toast.classList.remove("translate-y-24", "opacity-0");
+      toast.classList.add("translate-y-0", "opacity-100");
+
+      setTimeout(() => {
+        toast.classList.remove("translate-y-0", "opacity-100");
+        toast.classList.add("translate-y-24", "opacity-0");
+      }, 3500);
+    }
+
+    // Canvas Animated Golden Embers/Particles
+    function initAmbientParticles() {
+      const canvas = document.getElementById('ambientCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      const particleCount = 42;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2.2 + 0.8;
+          this.speedY = -(Math.random() * 0.45 + 0.15);
+          this.speedX = (Math.random() - 0.5) * 0.25;
+          this.alpha = Math.random() * 0.6 + 0.2;
+          this.fadeSpeed = Math.random() * 0.006 + 0.002;
+        }
+        update() {
+          this.y += this.speedY;
+          this.x += this.speedX;
+          this.alpha -= this.fadeSpeed;
+          if (this.alpha <= 0 || this.y < 0) {
+            this.reset();
+            this.y = canvas.height + 5;
+          }
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(212, 175, 55, ${this.alpha})`;
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = '#FFD700';
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      updateVolunteerCount();
+      initAmbientParticles();
+
+      const list = getStoredVolunteers();
+      if (list.length > 0) {
+        populateIdCard(list[0]);
+      }
+    });
+  </script>
+</body>
+</html>
